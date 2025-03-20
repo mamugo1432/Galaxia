@@ -35,6 +35,22 @@ class GalaxiaTests {
 			  assertEquals(6, Galaxia1.moverDerecha(5));
 		      assertEquals(1, Galaxia1.moverDerecha(0));
 		      assertEquals(-4, Galaxia1.moverDerecha(-5));
+		      
+		      assertEquals(6, Galaxia2.moverDerecha(5));
+		      assertEquals(1, Galaxia2.moverDerecha(0));
+		      assertEquals(-4, Galaxia2.moverDerecha(-5));
+		      
+		      assertEquals(6, Galaxia3.moverDerecha(5));
+		      assertEquals(1, Galaxia3.moverDerecha(0));
+		      assertEquals(-4, Galaxia3.moverDerecha(-5));
+		      
+		      assertEquals(6, Galaxia4.moverDerecha(5));
+		      assertEquals(1, Galaxia4.moverDerecha(0));
+		      assertEquals(-4, Galaxia4.moverDerecha(-5));
+		      
+		      assertEquals(6, Galaxia5.moverDerecha(5));
+		      assertEquals(1, Galaxia5.moverDerecha(0));
+		      assertEquals(-4, Galaxia5.moverDerecha(-5));
 		}
 	}
 }
