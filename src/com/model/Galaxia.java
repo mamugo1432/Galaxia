@@ -18,4 +18,13 @@ public class Galaxia {
 		return posicionHorizontal--;
 	}
 
+		protected int moverDerecha(int posicionHorizontal) {
+		
+		return posicionHorizontal++;
+	}
+	
+	protected int moverArriba(int posicionVertical) {
+		
+		return posicionVertical++;
+	}
 }
