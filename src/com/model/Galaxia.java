@@ -4,9 +4,9 @@ public class Galaxia {
 
 
 
-	private int moverDerecha(int[][] matriz) {
+	private int moverDerecha(int posicionHorizontal) {
 		
-		return 0;
+		return posicionHorizontal++;
 	}
 	
 }
