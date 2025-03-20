@@ -3,7 +3,17 @@ package com.model;
 public class Galaxia {
 
 	public Galaxia() {
-		//"subiendo proyecto"
+		
+		
+		
+	}
+	
+	
+	private int moverIzquierda(int [][] matriz ) {
+		int posicion=0;
+		
+		
+		return posicion;
 	}
 
 }
