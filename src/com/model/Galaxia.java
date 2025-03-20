@@ -4,8 +4,9 @@ public class Galaxia {
 
 
 
-	private void moverDerecha(int[][] matriz) {
+	private int moverDerecha(int[][] matriz) {
 		
+		return 0;
 	}
 	
 }
