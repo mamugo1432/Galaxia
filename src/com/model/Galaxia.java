@@ -7,12 +7,11 @@ public class Galaxia {
 		
 		
 	}
-	
-	private int moverAbajo(int posicionHorizontal) {
+	private int moverAbajo(int posicionVertical) {
 
-		return posicionHorizontal--;
+		return posicionVertical--;
 	}
-	
+
 	
 	private int moverIzquierda(int posicionHorizontal) {
 
