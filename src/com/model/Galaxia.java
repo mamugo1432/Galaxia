@@ -8,12 +8,15 @@ public class Galaxia {
 		
 	}
 	
+	private int moverAbajo(int posicionHorizontal) {
+
+		return posicionHorizontal--;
+	}
 	
-	private int moverIzquierda(int [][] matriz ) {
-		int posicion=0;
-		
-		
-		return posicion;
+	
+	private int moverIzquierda(int posicionHorizontal) {
+
+		return posicionHorizontal--;
 	}
 
 }
