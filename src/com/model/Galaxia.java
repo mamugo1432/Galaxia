@@ -1,9 +1,10 @@
 package com.model;
 
-public class Galaxia {
+import java.util.Arrays;
 
-	public Galaxia() {
-		private int[][] galaxia;
+public class Galaxia {
+	
+	private int[][] galaxia;
 	
 	public Galaxia(int numero) throws InvalidNumberException {
 		
@@ -13,7 +14,35 @@ public class Galaxia {
 			this.galaxia= new  int[numero][numero];
 		}
 		
- 
+
+		
+	}
+	protected int moverAbajo(int posicionVertical) {
+
+		return posicionVertical--;
 	}
 
+	
+	protected int moverIzquierda(int posicionHorizontal) {
+
+		return posicionHorizontal--;
+	}
+
+		protected int moverDerecha(int posicionHorizontal) {
+		
+		return posicionHorizontal++;
+	}
+	
+	protected int moverArriba(int posicionVertical) {
+		
+		return posicionVertical++;
+	}
+
+	@Override
+	public String toString() {
+		return "Galaxia galaxia=" + Arrays.toString(galaxia) ;
+	}
+
+	
 }
+
