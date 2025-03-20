@@ -1,4 +1,6 @@
 package com.modelTests;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import com.model.Galaxia;
@@ -26,4 +28,13 @@ class GalaxiaTests {
 		@Test
 		 void objetoLanzaExcepcion() {
 			assertThrows(InvalidNumberException.class, () -> new Galaxia(6));
+		}
+		
+		@Test
+		void moverDerechaTest() {
+			  assertEquals(6, Galaxia1.moverDerecha(5));
+		      assertEquals(1, Galaxia1.moverDerecha(0));
+		      assertEquals(-4, Galaxia1.moverDerecha(-5));
+		}
+	}
 }
