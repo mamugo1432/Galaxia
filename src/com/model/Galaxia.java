@@ -9,4 +9,9 @@ public class Galaxia {
 		return posicionHorizontal++;
 	}
 	
+	private int moverArriba(int posicionVertical) {
+		
+		return posicionVertical++;
+	}
+	
 }
