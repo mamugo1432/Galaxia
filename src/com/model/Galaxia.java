@@ -1,10 +1,10 @@
 package com.model;
 
-public class Galaxia {
+import java.util.Arrays;
 
-	public Galaxia() {
-		
-		private int[][] galaxia;
+public class Galaxia {
+	
+	private int[][] galaxia;
 	
 	public Galaxia(int numero) throws InvalidNumberException {
 		
@@ -37,4 +37,12 @@ public class Galaxia {
 		
 		return posicionVertical++;
 	}
+	
+	@Override
+	public String toString() {
+		return "Galaxia [galaxia=" + Arrays.toString(galaxia) + "]";
+	}
+
+	
 }
+
