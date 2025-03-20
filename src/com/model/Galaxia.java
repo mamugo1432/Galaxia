@@ -37,10 +37,10 @@ public class Galaxia {
 		
 		return posicionVertical++;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Galaxia [galaxia=" + Arrays.toString(galaxia) + "]";
+		return "Galaxia galaxia=" + Arrays.toString(galaxia) ;
 	}
 
 	
