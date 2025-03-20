@@ -4,7 +4,7 @@ public class Galaxia {
 
 	public Galaxia() {
 
- main
+ 
 	}
 
 }
