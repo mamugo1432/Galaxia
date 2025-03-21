@@ -7,7 +7,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import com.model.Galaxia;
 
-import com.model.Galaxia;
 import com.model.InvalidNumberException;
 
 class GalaxiaTests {
