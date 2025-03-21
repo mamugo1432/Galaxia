@@ -1,9 +1,12 @@
 package com.modelTests;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
 import com.model.Galaxia;
+import com.model.InvalidNumberException;
 class GalaxiaTests {
 	
 	class TestGalaxia {
@@ -18,7 +21,7 @@ class GalaxiaTests {
 			try{
 				Galaxia1 = new Galaxia(5);
 				Galaxia2 = new Galaxia(7);
-				Galaxia3 = new Galaxia(9;
+				Galaxia3 = new Galaxia(9);
 				Galaxia4 = new Galaxia(11);
 				Galaxia5 = new Galaxia(13);
 			}catch(InvalidNumberException e) {
