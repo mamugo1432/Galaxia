@@ -9,8 +9,14 @@ import com.model.Galaxia;
 
 import com.model.Galaxia;
 import com.model.InvalidNumberException;
+
 class GalaxiaTests {
 
+		private static Galaxia Galaxia1;
+		private static Galaxia Galaxia2;
+		private static Galaxia Galaxia3;
+		private static Galaxia Galaxia4;
+		private static Galaxia Galaxia5;
 
 	int[][] matriz5 = {
 			{2,4,4,4,4},
@@ -46,29 +52,6 @@ class GalaxiaTests {
 			{2,1,3,5},
 			{2,4,3,1}
 	};
-	
-	@Test
-	void testGalaxia() {
-		fail("Not yet implemented");
-	}
-	
-	@Test
-	void testContarEstrellas(){
-		assertEquals(41,ContarEstrellas(matriz5));
-		assertEquals(54, ContarEstrellas(matriz7));
-		assertEquals(114, ContarEstrellas(matriz9));
-		assesrnotEquals(0, ContarEstrellas(matriz9));
-		assertnotEquals(Intergermaxvalue, ContarEstrellas(matriz9));
-		assertnotEquals(-1, ContarEstrellas(matriz9));
-	}
-
-	
-	class TestGalaxia {
-		private static Galaxia Galaxia1;
-		private static Galaxia Galaxia2;
-		private static Galaxia Galaxia3;
-		private static Galaxia Galaxia4;
-		private static Galaxia Galaxia5;
 		
 		@BeforeAll
 		static void crearGalaxias() {
@@ -109,5 +92,14 @@ class GalaxiaTests {
 		      assertEquals(1, Galaxia5.moverDerecha(0));
 		      assertEquals(-4, Galaxia5.moverDerecha(-5));
 		}
+
+		@Test
+	void testContarEstrellas(){
+		assertEquals(41,ContarEstrellas(matriz5));
+		assertEquals(54, ContarEstrellas(matriz7));
+		assertEquals(114, ContarEstrellas(matriz9));
+		assesrnotEquals(0, ContarEstrellas(matriz9));
+		assertnotEquals(Intergermaxvalue, ContarEstrellas(matriz9));
+		assertnotEquals(-1, ContarEstrellas(matriz9));
 	}
-}
+	}
