@@ -38,37 +38,35 @@ public class Galaxia {
 		return posicionVertical++;
 	}
 	
-	public int contarLinea(int movimiento,int direccion, boolean bandera) {
+	public int contarLinea(int posicionColumna , int posicionFila ,int direccion,int movimiento, boolean bandera) {
 		int suma = 0;
 		bandera = true;
 		// Movimiento hacia la derecha
 	    if (direccion == 0) {
-	        for (int col = 0; col < galaxia.length; col++) {
-	            suma += galaxia[movimiento][col];
+	        for (int col = posicionColumna; col < movimiento && bandera ; col++) {
+	            suma += galaxia[moverDerecha(posicionColumna)][col];
 	        }
 	    } 
 	    // Movimiento hacia abajo
 	    else if (direccion == 1) {
-	        for (int fila = 0; fila < galaxia.length; fila++) {
-	            suma += galaxia[fila][movimiento];
+	        for (int fila = posicionFila; fila < movimiento && bandera ; fila++) {
+	            suma += galaxia[fila][moverAbajo(posicionFila)];
 	        }
 	    } 
 	    // Movimiento hacia la izquierda
 	    else if (direccion == 2) {
-	        for (int col = galaxia.length - 1; col >= 0; col--) {
-	            suma += galaxia[movimiento][col];
+	        for (int col = galaxia.length - 1; col >= 0 && bandera ; col--) {
+	            suma += galaxia[moverIzquierda(posicionColumna)][col];
 	        }
 	    } 
 	    // Movimiento hacia arriba
 	    else if (direccion == 3) {
-	        for (int fila = galaxia.length - 1; fila >= 0; fila--) {
-	            suma += galaxia[fila][movimiento];
+	        for (int fila = galaxia.length - 1; fila >= 0 && bandera ; fila--) {
+	            suma += galaxia[fila][moverArriba(posicionFila)];
 	        }
-	    }else {
-        	bandera = false;
-        }
-        
-        return suma;
+	    }
+	    
+        return suma ;
 	}
 	
 
