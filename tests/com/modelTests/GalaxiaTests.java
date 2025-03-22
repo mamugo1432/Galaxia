@@ -76,5 +76,14 @@ class GalaxiaTests {
 
 		}
 	
+	@Test
+    void testContarEstrellas(){
+        assertEquals(41,ContarEstrellas(matriz5));
+        assertEquals(54, ContarEstrellas(matriz7));
+        assertEquals(114, ContarEstrellas(matriz9));
+        assesrnotEquals(0, ContarEstrellas(matriz9));
+        assertnotEquals(Integer.MAX_VALUE, ContarEstrellas(matriz9));
+        assertnotEquals(-1, ContarEstrellas(matriz9));
+    }
 	
-	}
+}
