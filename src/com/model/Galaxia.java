@@ -35,12 +35,10 @@ public class Galaxia {
 		}
 	
 	private int moverAbajo(int posicionVertical) {
-
 		return posicionVertical+1;
 	}
 
 	private int moverIzquierda(int posicionHorizontal) {
-
 		return posicionHorizontal-1;
 	}
 
@@ -115,5 +113,11 @@ public class Galaxia {
 		}
 		return sb.toString();
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+	    return this == obj || (obj instanceof Galaxia && Arrays.deepEquals(this.galaxia, ((Galaxia) obj).galaxia));
+	}
+
 }
 
