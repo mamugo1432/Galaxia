@@ -74,6 +74,7 @@ class GalaxiaTests {
 		assertTrue(Galaxia1.equals(Galaxia1));
 		assertTrue(Galaxia2.equals(Galaxia2));
 
+
 		}
 	
 	@Test
@@ -87,3 +88,22 @@ class GalaxiaTests {
     }
 	
 }
+
+	
+
+    	assertFalse(Galaxia1.equals(null));
+    	assertFalse(Galaxia2.equals(null));
+
+    	assertFalse(Galaxia1.equals("Una cadena cualquiera"));
+
+    	Galaxia Galaxia3 = new Galaxia(Galaxia1.getNombre(), Galaxia1.getTamano(), Galaxia1.getTipo());
+    	assertTrue(Galaxia1.equals(Galaxia3));
+
+    	Galaxia Galaxia4 = new Galaxia(Galaxia1.getNombre(), Galaxia1.getTamano() + 1, Galaxia1.getTipo());
+    	assertFalse(Galaxia1.equals(Galaxia4));
+		
+		}
+	
+	
+	}
+
