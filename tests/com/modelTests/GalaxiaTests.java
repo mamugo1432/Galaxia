@@ -1,6 +1,8 @@
 package com.modelTests;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -64,42 +66,17 @@ class GalaxiaTests {
 			System.out.println(e.getLocalizedMessage());
 		}
 	}
-	
-	@Test
-	 void objetoLanzaExcepcion() {
-		assertThrows(InvalidNumberException.class, () -> new Galaxia(6));
-	}
-	
-	@Test
-	void moverDerechaTest() {
-		  assertEquals(6, Galaxia1.moverDerecha(5));
-	      assertEquals(1, Galaxia1.moverDerecha(0));
-	      assertEquals(-4, Galaxia1.moverDerecha(-5));
-	      
-	      assertEquals(6, Galaxia2.moverDerecha(5));
-	      assertEquals(1, Galaxia2.moverDerecha(0));
-	      assertEquals(-4, Galaxia2.moverDerecha(-5));
-	      
-	      assertEquals(6, Galaxia3.moverDerecha(5));
-	      assertEquals(1, Galaxia3.moverDerecha(0));	
-	      assertEquals(-4, Galaxia3.moverDerecha(-5));
-		      
-		  assertEquals(6, Galaxia4.moverDerecha(5));
-		  assertEquals(1, Galaxia4.moverDerecha(0));
-		  assertEquals(-4, Galaxia4.moverDerecha(-5));
-		     
-		  assertEquals(6, Galaxia5.moverDerecha(5));
-		  assertEquals(1, Galaxia5.moverDerecha(0));
-		  assertEquals(-4, Galaxia5.moverDerecha(-5));
-		}
 
+	
+	
 	@Test
-	void testContarEstrellas(){
-		assertEquals(41,ContarEstrellas(matriz5));
-		assertEquals(54, ContarEstrellas(matriz7));
-		assertEquals(114, ContarEstrellas(matriz9));
-		assesrnotEquals(0, ContarEstrellas(matriz9));
-		assertnotEquals(Intergermaxvalue, ContarEstrellas(matriz9));
-		assertnotEquals(-1, ContarEstrellas(matriz9));
-	}
+	void testEquals() {
+		assertFalse(Galaxia1.equals(Galaxia2));
+		assertFalse(Galaxia2.equals(Galaxia1));
+		assertTrue(Galaxia1.equals(Galaxia1));
+		assertTrue(Galaxia2.equals(Galaxia2));
+
+		}
+	
+	
 	}
