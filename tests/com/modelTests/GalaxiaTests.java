@@ -67,8 +67,6 @@ class GalaxiaTests {
 		}
 	}
 
-	
-	
 	@Test
 	void testEquals() {
 		assertFalse(Galaxia1.equals(Galaxia2));
