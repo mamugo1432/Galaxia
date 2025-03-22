@@ -110,5 +110,11 @@ public class Galaxia {
 		}
 		return sb.toString();
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+	    return this == obj || (obj instanceof Galaxia && Arrays.deepEquals(this.galaxia, ((Galaxia) obj).galaxia));
+	}
+
 }
 
