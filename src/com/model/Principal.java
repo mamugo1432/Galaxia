@@ -6,7 +6,6 @@ public class Principal {
 		try {
 			Galaxia g1 = new Galaxia(3);
 			System.out.println(g1);
-			System.out.println(g1.contarEstrellas());
 		} catch (InvalidNumberException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

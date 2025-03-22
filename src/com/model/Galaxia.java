@@ -8,6 +8,7 @@ public class Galaxia {
 	private int[][] galaxia;
 	private int posicionColumna;
 	private int posicionFila;
+	private int estrellasEspiral;
 	
 	public Galaxia(int numero) throws InvalidNumberException {
 		Random rd = new Random();
@@ -22,6 +23,8 @@ public class Galaxia {
 			}
 			this.posicionColumna = calcularMedio(galaxia);
 			this.posicionFila = calcularMedio(galaxia);
+			this.estrellasEspiral = 0;
+			contarEstrellas();
 		}	
 	}
 	
@@ -32,6 +35,10 @@ public class Galaxia {
 			}else {
 				this.galaxia=matriz;
 			}	
+			this.posicionColumna = calcularMedio(galaxia);
+			this.posicionFila = calcularMedio(galaxia);
+			this.estrellasEspiral = 0;
+			contarEstrellas();
 		}
 	
 	private int moverAbajo(int posicionVertical) {
@@ -52,53 +59,48 @@ public class Galaxia {
 	}
 	
 
-	private int contarLinea(int direccion,int movimiento) {
-		int suma = 0;
+	private void contarLinea(int direccion,int movimiento) {
 		// Movimiento hacia la derecha
 	    if (direccion == 1) {
 	        for (int fila = 0; fila < movimiento; fila++) {
-	            suma += galaxia[posicionColumna][posicionFila=moverDerecha(posicionFila)];
+	        	estrellasEspiral += galaxia[posicionColumna][posicionFila=moverDerecha(posicionFila)];
 	        }
 	    } 
 	    // Movimiento hacia abajo
 	    else if (direccion == 2) {
 	        for (int col = 0; col < movimiento; col++) {
-	            suma += galaxia[posicionColumna=moverAbajo(posicionColumna)][posicionFila];
+	        	estrellasEspiral += galaxia[posicionColumna=moverAbajo(posicionColumna)][posicionFila];
 	        }
 	    } 
 	    // Movimiento hacia la izquierda
 	    else if (direccion == 3) {
 	        for (int fila = movimiento; fila > 0; fila--) {
-	            suma += galaxia[posicionColumna][posicionFila=moverIzquierda(posicionFila)];
+	        	estrellasEspiral += galaxia[posicionColumna][posicionFila=moverIzquierda(posicionFila)];
 	        }
 	    } 
 	    // Movimiento hacia arriba
 	    else if (direccion == 0) {
 	        for (int col = movimiento; col > 0; col--) {
-	            suma += galaxia[posicionColumna=moverArriba(posicionColumna)][posicionFila];
+	        	estrellasEspiral += galaxia[posicionColumna=moverArriba(posicionColumna)][posicionFila];
 	        }
 	    }
-	    
-        return suma ;
 	}
 	
 
-	public int contarEstrellas() {
+	public void contarEstrellas() {
 		int direccion = 0;
 		int movimiento = 1;
-		int sumaTotal = galaxia[posicionFila][posicionColumna];
+		this.estrellasEspiral = galaxia[posicionFila][posicionColumna];
 		boolean parar = false;
 		while (parar == false) {
 			try {
-				sumaTotal += contarLinea(direccion, movimiento);
+				contarLinea(direccion, movimiento);
 			} catch (ArrayIndexOutOfBoundsException e) {
-				sumaTotal += contarLinea(direccion, movimiento-1);
 				parar=true;
 			}
 			direccion = (direccion>=3) ? 0:direccion+1;
 			movimiento++;
 		}
-		return sumaTotal;
 	}
 	
 	private int calcularMedio(int[][] matriz) {
@@ -111,7 +113,7 @@ public class Galaxia {
 		for (int i = 0; i < galaxia.length; i++) {
 			sb.append(Arrays.toString(galaxia[i])+"\n");
 		}
-		return sb.toString();
+		return (sb.append(this.estrellasEspiral)).toString();
 	}
 	
 	@Override
