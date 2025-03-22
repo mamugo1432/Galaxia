@@ -73,6 +73,22 @@ class GalaxiaTests {
 		assertFalse(Galaxia2.equals(Galaxia1));
 		assertTrue(Galaxia1.equals(Galaxia1));
 		assertTrue(Galaxia2.equals(Galaxia2));
+
+
+		}
+	
+	@Test
+    void testContarEstrellas(){
+        assertEquals(41,ContarEstrellas(matriz5));
+        assertEquals(54, ContarEstrellas(matriz7));
+        assertEquals(114, ContarEstrellas(matriz9));
+        assesrnotEquals(0, ContarEstrellas(matriz9));
+        assertnotEquals(Integer.MAX_VALUE, ContarEstrellas(matriz9));
+        assertnotEquals(-1, ContarEstrellas(matriz9));
+    }
+	
+}
+
 	
 
     	assertFalse(Galaxia1.equals(null));
@@ -90,3 +106,4 @@ class GalaxiaTests {
 	
 	
 	}
+
